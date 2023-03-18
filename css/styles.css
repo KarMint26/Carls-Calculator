@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Mobile UI */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url(../assets/glassmorphism-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container h1 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.container .form {
+    position: inherit;
+    width: fit-content;
+    height: fit-content;
+    padding: 1.2rem;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px 0 rgba(255, 255, 255, .5),
+                -1px -1px 2px 0 rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    margin-top: -.8rem;
+}
+
+.container .form::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 264px;
+    height: 412px;
+    border-radius: 10px;
+    background-color: #e2e2e2;
+    opacity: .5;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.container .form input[type="text"] {
+    width: 195px;
+    margin: 1.5rem 0 1.5rem .3rem;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    background-color: transparent;
+    text-align: right;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.container .form input[type="button"] {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 3px 0 rgba(255, 0, 76, .3);
+    backdrop-filter: blur(5px);
+    font-size: 1.2rem;
+    margin: 0 4px 6px 0;
+    font-weight: bold;
+    color: #fff;
+}
+
+#null {
+    width: 105px;
+    border-radius: 20px;
+}
+
+footer {
+    font-size: .8rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: .5px;
+    margin-bottom: .5rem;
+}
+
+/* Tablet UI and Desktop UI */
+
+@media only screen and (min-width: 768px) {
+
+    .container h1 {
+        font-size: 4rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .container .form {
+        position: inherit;
+        width: fit-content;
+        height: fit-content;
+        padding: 1.8rem;
+        background-color: transparent;
+        box-shadow: 1px 1px 2px 0 rgba(255, 255, 255, .5),
+                    -1px -1px 2px 0 rgba(255, 255, 255, .5);
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        margin-top: -.8rem;
+    }
+    
+    .container .form::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 484px;
+        height: 713px;
+        border-radius: 10px;
+        background-color: #e2e2e2;
+        opacity: .5;
+        backdrop-filter: blur(5px);
+        z-index: -1;
+    }
+    
+    .container .form input[type="text"] {
+        width: 370px;
+        margin: 1.5rem 0 1.5rem .3rem;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        background-color: transparent;
+        text-align: right;
+        font-size: 2.5rem;
+        color: #fff;
+        font-weight: bold;
+    }
+    
+    .container .form input[type="button"] {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        box-shadow: 0 0 3px 0 rgba(255, 0, 76, .3);
+        backdrop-filter: blur(5px);
+        font-size: 1.8rem;
+        margin: 0 4px 6px 0;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    #null {
+        width: 205px;
+        border-radius: 40px;
+    }
+    
+    footer {
+        font-size: 1.2rem;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: .5px;
+        margin-bottom: .5rem;
+    }
+
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carl's Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/calculator.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Carl's Calculator</h1>
+        <form class="form">
+            <div class="display">
+                <input type="text" name="displays">
+            </div>
+            <div class="box-content">
+                <div>
+                    <input type="button" value="AC" onclick="displays.value = ''" style="color: #f5008f;">
+                    <input type="button" value="◄" onclick="displays.value = displays.value.toString().slice(0,-1)" style="color: #f5008f;">
+                    <input type="button" value="%" onclick="displays.value += '%'" class="subColor"  style="color: #f5008f;">
+                    <input type="button" value="÷" onclick="displays.value += '/'" class="subColor"  style="color: #f5008f;">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="displays.value += '7'">
+                    <input type="button" value="8" onclick="displays.value += '8'">
+                    <input type="button" value="9" onclick="displays.value += '9'">
+                    <input type="button" value="x" onclick="displays.value += '*'"  style="color: #f5008f;">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="displays.value += '4'">
+                    <input type="button" value="5" onclick="displays.value += '5'">
+                    <input type="button" value="6" onclick="displays.value += '6'">
+                    <input type="button" value="-" onclick="displays.value += '-'"  style="color: #f5008f;">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="displays.value += '1'">
+                    <input type="button" value="2" onclick="displays.value += '2'">
+                    <input type="button" value="3" onclick="displays.value += '3'">
+                    <input type="button" value="+" onclick="displays.value += '+'"  style="color: #f5008f;">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="displays.value += '0'" id="null">
+                    <input type="button" value="." onclick="displays.value += '.'">
+                    <input type="button" value="=" onclick="displays.value = eval(displays.value)"  style="color: #f5008f;">
+                </div>
+            </div>
+        </form>
+        <footer>
+            <p>&copy; Karl's Calculator 2023</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
